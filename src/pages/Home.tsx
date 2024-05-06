@@ -9,7 +9,7 @@ function Home() {
     <>
       <NavBar />
       <HeroSection />
-      <Container className="bg-[#E8EEE7] md:flex items-start rounded-3xl pt-10 relative">
+      <Container className="bg-[#E8EEE7] md:flex items-start rounded-3xl pt-10 relative overflow-hidden">
         <div className="md:w-1/2">
           <div className="md:ml-24 text-center md:text-left">
             <span className="covGrace text-gray-400 text-xl">
