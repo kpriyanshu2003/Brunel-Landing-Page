@@ -9,7 +9,7 @@ function HeadContent({
 }) {
   return (
     <div className="text-center">
-      <span className="covGrace text-green-400 text-xl">{subtitle}</span>
+      <span className="covGrace text-green-400 text-2xl">{subtitle}</span>
       <br />
       <span className="text-5xl font-semibold">
         {title1} <br /> {title2}

@@ -50,8 +50,7 @@ function Register() {
         <Button
           variant="primary"
           className="my-3"
-          disabled={false}
-          // disabled={!(formData.email.length > 0 && formData.name.length > 0)}
+          disabled={!(formData.email.length > 0 && formData.name.length > 0)}
           type="submit"
         >
           Submit
