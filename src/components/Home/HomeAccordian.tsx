@@ -37,22 +37,20 @@ function HomeAccordianItem({
   onClick: () => void;
 }) {
   return (
-    <div className={`mr-16 ${className}`}>
-      <div
-        className="flex items-center justify-between cursor-pointer mt-5"
-        onClick={onClick}
-      >
+    <div className={`mr-16 ${className} cursor-pointer`} onClick={onClick}>
+      <div className="flex items-center justify-between mt-5">
         <span className="font-semibold">{data.question}</span>
         {isOpen ? <MinusIcon /> : <PlusIcon />}
       </div>
 
       <div
-        className={`text-[#617275]  text-sm border my-2 ${
-          isOpen ? "h-full opacity-100" : "h-0 opacity-0"
+        className={`text-[#617275] text-sm border my-2 transition-all duration-1000 ${
+          isOpen ? "max-h-[1000px] h-auto" : "h-0 max-h-0 overflow-hidden"
         }`}
       >
         {data.answer}
       </div>
+
       {!isLast && <hr className="h-0.5 bg-[#D7D7D7] my-5" />}
     </div>
   );
