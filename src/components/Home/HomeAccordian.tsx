@@ -47,7 +47,7 @@ function HomeAccordianItem({
       </div>
 
       <div
-        className={`text-[#617275] transition-all ease-in-out duration-300 text-sm border my-2 ${
+        className={`text-[#617275]  text-sm border my-2 ${
           isOpen ? "h-full opacity-100" : "h-0 opacity-0"
         }`}
       >

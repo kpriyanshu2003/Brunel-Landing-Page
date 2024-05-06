@@ -17,7 +17,7 @@ function NavBar() {
         <img src="/logo.svg" alt="Logo" />
       </Link>
       {location === "/" && (
-        <div className="flex gap-5 mt-5 md:mt-0">
+        <div className="flex gap-5 mt-5 md:mt-0 justify-center">
           <Button
             variant="secondary"
             onClick={() => (window.location.href = "/register")}
@@ -28,10 +28,7 @@ function NavBar() {
         </div>
       )}
       {location === "/register" && (
-        <Link
-          to="/"
-          className="p-4 border rounded-full cursor-pointer"
-        >
+        <Link to="/" className="p-4 border rounded-full cursor-pointer">
           <CloseIcon />
         </Link>
       )}
