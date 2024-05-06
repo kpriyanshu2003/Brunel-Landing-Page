@@ -5,11 +5,15 @@ function Button({
   children,
   variant,
   onClick,
+  disabled,
+  type,
 }: {
   className?: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   onClick?: () => void;
+  disabled?: boolean;
+  type?: "submit" | "button";
 }) {
   let buttonClassName = "";
   switch (variant) {
@@ -20,11 +24,14 @@ function Button({
       buttonClassName += "border hover:bg-[#EAEAEA] hover:border-transparent";
       break;
   }
-  console.log(variant);
   return (
     <button
       onClick={onClick}
-      className={`px-8 transition-all duration-300flex items-center p-4 rounded-full ${buttonClassName} ${className}`}
+      type={type}
+      disabled={disabled}
+      className={`px-8 transition-all duration-300flex items-center p-4 rounded-full ${buttonClassName} ${className} ${
+        disabled && "cursor-not-allowed bg-[#4E4E4E]"
+      }`}
     >
       {children}
     </button>

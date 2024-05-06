@@ -1,21 +1,11 @@
-import { Link } from "react-router-dom";
-import Button from "../components/Button";
 import Container from "../components/Container";
 import HomeAccordian from "../components/Home/HomeAccordian";
+import NavBar from "../components/NavBar";
 
 function Home() {
   return (
     <div>
-      {/* NavBar */}
-      <Container className="flex justify-between mt-4 border rounded-full">
-        <Link to="/" className="flex items-center ml-8">
-          <img src="/logo.svg" alt="Logo" />
-        </Link>
-        <div className="flex gap-5">
-          <Button variant="secondary">Get Projects</Button>
-          <Button variant="primary">OnBoard Talent</Button>
-        </div>
-      </Container>
+      <NavBar />
 
       {/* Hero Section */}
       {/* TODO : Hero Section Image and other components */}
@@ -41,15 +31,6 @@ function Home() {
         </div>
         <div className="w-1/2">
           <HomeAccordian />
-        </div>
-      </Container>
-
-      {/* Copyright */}
-      <Container className="bg-[#F5F5F5] rounded-3xl text-sm flex justify-between px-10 py-10">
-        <span>&copy; Talup 2023. All rights reserved</span>
-        <div className="flex gap-7 items-center">
-          <Link to="#">Terms & Conditions</Link>
-          <Link to="#">Privacy Policy</Link>
         </div>
       </Container>
     </div>
