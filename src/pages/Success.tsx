@@ -18,7 +18,7 @@ function Success() {
   }, [timer]);
 
   return (
-    <div className="relative border h-screen">
+    <div className="relative border h-dvh">
       <NavBar />
       <div className="absolute left-1/2 top-48 -translate-x-1/2">
         <div className="grid justify-center">
@@ -36,7 +36,7 @@ function Success() {
         </div>
       </div>
       <br />
-      <span className="absolute bottom-5 left-1/2 -translate-x-1/2">
+      <span className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap">
         Redirecting you to Homepage in <b>{timer} Seconds</b>
       </span>
     </div>

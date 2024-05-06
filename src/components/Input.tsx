@@ -16,7 +16,7 @@ function Input({
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
-    <div className={`${className} group my-3 w-72`}>
+    <div className={`group my-3 w-80 ${className}`}>
       <div className="bg-[#EFEFEF] rounded-full px-4 focus-within:border-[#537FF1] border border-transparent transition-all duration-300 focus-within:bg-[#F5F8FF]">
         <input
           type={type}

@@ -9,19 +9,23 @@ function Home() {
     <>
       <NavBar />
       <HeroSection />
-      <Container className="bg-[#E8EEE7] flex items-center rounded-3xl pt-10 relative">
-        <div className="w-1/2">
-          <div className="ml-24">
+      <Container className="bg-[#E8EEE7] md:flex items-start rounded-3xl pt-10 relative">
+        <div className="md:w-1/2">
+          <div className="md:ml-24 text-center md:text-left">
             <span className="covGrace text-gray-400 text-xl">
               What's on your mind
             </span>
             <br />
             <span className="text-5xl">Ask Questions</span>
           </div>
-          <img src="/assets/arrow.svg" alt="Ask Questions" className="mt-32" />
+          <img
+            src="/assets/arrow.svg"
+            alt="Ask Questions"
+            className="absolute mt-32 top-10 -left-16 scale-75 hidden md:block"
+          />
         </div>
-        <div className="w-1/2">
-          <HomeAccordian />
+        <div className="md:w-1/2 w-full">
+          <HomeAccordian className="w-full px-4 md:px-0 md:w-auto" />
         </div>
       </Container>
       <Footer />

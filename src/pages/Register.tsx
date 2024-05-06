@@ -30,7 +30,7 @@ function Register() {
         title2="Journey here!"
       />
       <form
-        className="mt-10 grid justify-center"
+        className="mt-10 grid justify-center w-full"
         onSubmit={(e) => handleSubmit(e)}
       >
         <Input

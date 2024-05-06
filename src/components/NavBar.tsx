@@ -8,14 +8,16 @@ function NavBar() {
   const location = useLocation().pathname;
   return (
     <Container
-      className={`
-      ${location === "/" && "border rounded-full"} flex justify-between mt-4`}
+      className={`justify-between mt-4
+      ${location === "/" && "md:flex md:border md:rounded-full"}
+      ${location === "/register" && "flex"}
+      `}
     >
-      <Link to="/" className="flex items-center ml-8">
+      <Link to="/" className="flex items-center md:ml-8 justify-center">
         <img src="/logo.svg" alt="Logo" />
       </Link>
       {location === "/" && (
-        <div className="flex gap-5">
+        <div className="flex gap-5 mt-5 md:mt-0">
           <Button
             variant="secondary"
             onClick={() => (window.location.href = "/register")}
@@ -26,7 +28,10 @@ function NavBar() {
         </div>
       )}
       {location === "/register" && (
-        <Link to="/" className="p-4 border rounded-full cursor-pointer">
+        <Link
+          to="/"
+          className="p-4 border rounded-full cursor-pointer"
+        >
           <CloseIcon />
         </Link>
       )}

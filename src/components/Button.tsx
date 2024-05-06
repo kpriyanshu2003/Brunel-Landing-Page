@@ -29,7 +29,7 @@ function Button({
       onClick={onClick}
       type={type}
       disabled={disabled}
-      className={`px-8 transition-all duration-300flex items-center p-4 rounded-full ${buttonClassName} ${className} ${
+      className={`px-8 transition-all duration-300 flex items-center p-4 justify-center rounded-full ${buttonClassName} ${className} ${
         disabled && "cursor-not-allowed bg-[#4E4E4E]"
       }`}
     >

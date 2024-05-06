@@ -14,7 +14,7 @@ function HeroImg() {
       <img
         src="/assets/hero-girl.png"
         alt="Hero"
-        className="w-[400px] h-[400px]"
+        className="w-[400px] h-[400px] absolute"
       />
 
       <div className="absolute top-20 left-16">
