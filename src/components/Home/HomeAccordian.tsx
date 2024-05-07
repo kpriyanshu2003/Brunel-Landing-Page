@@ -1,12 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import { homeaskQuestion } from "../../constants/HomeAskQuestions";
 import { MinusIcon, PlusIcon } from "../../constants/Icons";
 
 function HomeAccordian({ className }: { className?: string }) {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(2);
-  const handleItemClick = (index: number) => {
-    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
   return (
     <>
       {homeaskQuestion.map((items, index) => (
@@ -14,8 +10,6 @@ function HomeAccordian({ className }: { className?: string }) {
           key={index}
           data={items}
           className={className}
-          isOpen={openIndex === index}
-          onClick={() => handleItemClick(index)}
           isLast={index === homeaskQuestion.length - 1}
         />
       ))}
@@ -26,26 +20,26 @@ function HomeAccordian({ className }: { className?: string }) {
 function HomeAccordianItem({
   className,
   data,
-  isOpen,
   isLast,
-  onClick,
 }: {
   className?: string;
   data: { question: string; answer: string };
-  isOpen: boolean;
   isLast: boolean;
-  onClick: () => void;
 }) {
+  const [open, setOpen] = useState(false);
   return (
-    <div className={`mr-16 ${className} cursor-pointer`} onClick={onClick}>
+    <div
+      className={`mr-16 ${className} cursor-pointer`}
+      onClick={() => setOpen(!open)}
+    >
       <div className="flex items-center justify-between mt-5">
         <span className="font-semibold">{data.question}</span>
-        {isOpen ? <MinusIcon /> : <PlusIcon />}
+        {open ? <MinusIcon /> : <PlusIcon />}
       </div>
 
       <div
         className={`text-[#617275] text-sm border my-2 transition-all duration-1000 ${
-          isOpen ? "max-h-[1000px] h-auto" : "h-0 max-h-0 overflow-hidden"
+          open ? "max-h-[1000px] h-auto" : "h-0 max-h-0 overflow-hidden"
         }`}
       >
         {data.answer}
